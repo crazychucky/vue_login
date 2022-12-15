@@ -3,6 +3,8 @@
             ? `var(--el-border-radius-"base")`
             : ''}}</span>
    <div class="radius1">
+    <img class = "title" alt="paper plane" src="../assets/icon-paper-plane.png">
+    <!-- <img alt="Vue logo" src="../assets/icon-paper-plane.png"> -->
     <div>OK</div>     <!--TODO:嵌套登陆 -->
    </div>
 </template>
@@ -30,5 +32,11 @@ import { ref } from 'vue'
   bottom: 0;
   margin: auto;
   /* boxShadow: 'var(--el-box-shadow-dark)', */
+}
+.title {
+  padding-top:500px;
+  padding-left:-450px;
+  /* src: */
+  src:"../assets/icon-paper-plane.png"
 }
 </style>
