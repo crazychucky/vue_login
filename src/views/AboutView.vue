@@ -12,7 +12,7 @@
 
     <!-- left content -->
     <div class="intro">
-      <p>Login Title</p>
+      <p class="intro_title">               Login Title</p>
     </div>
   </div>
 </template>
@@ -61,5 +61,12 @@ import { ref } from 'vue'
   left: -533px;
   margin-top: 100;
   /* padding-top: 200; */
+}
+
+.intro_title {
+  font-size: 36pt;
+  color:white;
+  text-indent:250px;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 </style>
