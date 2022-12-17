@@ -12,7 +12,9 @@
 
     <!-- left content -->
     <div class="intro">
-      <p class="intro_title">               Login Title</p>
+      <p class="intro_title">Login Title</p>
+      <p class="intro_text">This is login context:The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog.</p>
+      <img alt="login" src="../assets/email.png" class="intro_img">
     </div>
   </div>
 </template>
@@ -57,16 +59,38 @@ import { ref } from 'vue'
 }
 
 .intro {
+  width:600px;
   position: relative;
-  left: -533px;
   margin-top: 100;
   /* padding-top: 200; */
 }
 
 .intro_title {
-  font-size: 36pt;
+  font-size: 32pt;
   color:white;
-  text-indent:250px;
+  text-indent:55px;
+  text-align:left;
+  /* background-color:red; */
   font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.intro_text {
+  position: relative;
+  left: 40px;
+
+  width:520px;
+  font-size: 12pt;
+  color:white;
+  /* background-color:red; */
+  text-align:left;
+  text-indent:25px;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  z-index: 5;   /*置于底层*/
+}
+.intro_img {
+  width:255px;
+  height: 255px;
+  position: relative;
+  top: -68px;
+  z-index: 1;  /*置于底层*/
 }
 </style>
