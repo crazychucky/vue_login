@@ -11,11 +11,13 @@
     </div>
 
     <!-- left content -->
-    <div class="intro">
+    <!-- <div class="intro">
       <p class="intro_title">Login Title</p>
       <p class="intro_text">This is login context:The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog.</p>
       <img alt="login" src="../assets/email.png" class="intro_img">
-    </div>
+    </div> -->
+
+    <div class="main_container">OK</div>
   </div>
 </template>
 
@@ -92,5 +94,11 @@ import { ref } from 'vue'
   position: relative;
   top: -68px;
   z-index: 1;  /*置于底层*/
+}
+
+.main_container {
+  width:1200;
+  height: 200;
+  background-color:red
 }
 </style>
