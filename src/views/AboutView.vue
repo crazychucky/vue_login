@@ -17,12 +17,45 @@
       <img alt="login" src="../assets/email.png" class="intro_img">
     </div> -->
 
-    <div class="main_container">OK</div>
+    <div class="main_container">
+      <!-- <div class="div-inline">第一个div盒子</div>
+      <div class="div-inline">第二个盒子</div>
+      <div class="div-inline">第三个盒子</div> -->
+      <div class="intro">
+        <p class="intro_title">Intro Title</p>
+        <p class="intro_text">This is login context:The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog.</p>
+        <img alt="login" src="../assets/email.png" class="intro_img">
+      </div>
+      <div class="login">
+        <p class="login_title">Login</p>
+        <div>
+          <el-input v-model="input_name" placeholder="Please input" size="large" :prefix-icon="User" class="name_input"></el-input>
+        </div>
+        <div>
+          <el-input v-model="input_pass" type="password" placeholder="Please input password" show-password size="large" :prefix-icon="Lock" class="password_input"></el-input>
+        </div>
+        <div>
+          <el-checkbox v-model="check_save_name" size="small" class="save_checker">Remember me</el-checkbox>
+          <el-button  type="info" link size="small" class="forget_pass">Forget Password?</el-button> 
+        </div>
+
+        <div>
+          <el-button type="primary" size="large" plain >Primary</el-button>
+        </div>
+        <!-- TODO:input name password -->
+        <!-- <p class="intro_text">This is login context:The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog.</p> -->
+        <!-- <img alt="login" src="../assets/email.png" class="intro_img"> -->
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { User,Lock } from '@element-plus/icons-vue'
+const input_name = ref('')
+const input_pass = ref('')
+const check_save_name = ref(true)
 
 </script>
 <style scoped>
@@ -62,13 +95,26 @@ import { ref } from 'vue'
 
 .intro {
   width:600px;
-  position: relative;
+  /* border: 3px solid #73AD21; */
+  /* position: relative; */
   margin-top: 100;
+  float:left;
+  /* padding-top: 200; */
+}
+.intro1 {
+  width:600px;
+  /* border: 3px solid #73AD21; */
+  /* position: relative; */
+  margin-top: 100;
+  /* display:inline; */
+  float:right;
+  background-color:white;
   /* padding-top: 200; */
 }
 
 .intro_title {
   font-size: 32pt;
+  width:600px;
   color:white;
   text-indent:55px;
   text-align:left;
@@ -77,7 +123,7 @@ import { ref } from 'vue'
 }
 .intro_text {
   position: relative;
-  left: 40px;
+  left: 46px;
 
   width:520px;
   font-size: 12pt;
@@ -96,9 +142,51 @@ import { ref } from 'vue'
   z-index: 1;  /*置于底层*/
 }
 
+.login {
+  width:600px;
+  /* border: 3px solid #73AD21; */
+  /* position: relative; */
+  margin-top: 100;
+  /* display:inline; */
+  float:right;
+  /* background-color:blueviolet; */
+}
+
+.login_title {
+  font-size: 32pt;
+  width:600px;
+  color:#0229bf;
+  text-align:center;
+  /* background-color:red; */
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 .main_container {
   width:1200;
-  height: 200;
-  background-color:red
+  height: 500;
+}
+.name_input {
+  width:300px;
+}
+.password_input {
+  padding-top: 15px;
+  padding-bottom: 3px;
+  width:300px;
+}
+
+.save_checker {
+  position: absolute;
+  left: 750px;
+}
+.forget_pass {
+  position: absolute;
+  right: 150px;
+}
+.test_debug {
+  background-color:plum;
+}
+.login_btn {
+  padding-top: 300;
+  background-color:blue;
 }
 </style>
