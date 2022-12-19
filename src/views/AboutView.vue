@@ -40,7 +40,8 @@
         </div>
 
         <div>
-          <el-button type="primary" size="large" plain >Primary</el-button>
+          <el-button type="primary" round class="login_btn">LOGIN</el-button>
+          <!-- <el-button type="primary" :icon="Search">Search</el-button> -->
         </div>
         <!-- TODO:input name password -->
         <!-- <p class="intro_text">This is login context:The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog,The quick brown fox jumps over the lazy dog.</p> -->
@@ -186,7 +187,9 @@ const check_save_name = ref(true)
   background-color:plum;
 }
 .login_btn {
-  padding-top: 300;
+  margin-top: 38px;
+  width:260px;
+  height:40px;
   background-color:blue;
 }
 </style>
