@@ -26,7 +26,7 @@
           <el-button  type="info" link size="small" class="forget_pass">Forget Password?</el-button> 
         </div>
         <div>
-          <el-button type="primary" round class="login_btn">LOGIN</el-button>
+          <el-button type="primary" round class="login_btn" @click="do_login">LOGIN</el-button>
         </div>
         <div class="sign_div">
           <span class="sign_text">Don't have an account? </span>
@@ -45,6 +45,13 @@ const input_name = ref('')
 const input_pass = ref('')
 const check_save_name = ref(true)
 
+function do_login() {
+  var str="Try Login:" 
+  // str = str + input_name.toString( )
+  // str = str + input_name.string() + ","
+  // str = str + input_name.string() + ","
+  alert(str);
+}
 </script>
 <style scoped>
 .radius1 {
